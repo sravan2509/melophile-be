@@ -1,5 +1,6 @@
 
 const mongoose = require('mongoose');
+const cors = require('cors');
 const users = require('./models/users')
 const reviews = require('./models/reviews')
 const Subscription = require('./models/subscription')
@@ -13,6 +14,7 @@ const app = express();
 const bodyParser  = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+app.use(cors({origin: '*'}));
 
 
 app.use((req, res, next) => {
