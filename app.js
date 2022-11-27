@@ -208,5 +208,5 @@ subscription.save()
 });  
 app.use('/playlist', product);
 
-app.listen(8000,()=>{ console.log('Listening')})    
+app.listen(process.env.PORT ||8000,()=>{ console.log('Listening')})    
 module.exports=app;
